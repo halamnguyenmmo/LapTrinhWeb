@@ -1,0 +1,20 @@
+body {
+    font -family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    padding: 20px;
+}
+h1 {
+    color: blue;
+    text-align: center;
+}
+h2 {
+    border-bottom: 2px solid black;
+    color: green;
+}
+p {
+    line-height: 1.6;
+    max-width: 700px;
+}
+.rechuot:hover {
+    background-color: red;
+}   
