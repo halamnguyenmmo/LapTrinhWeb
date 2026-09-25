@@ -3,9 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-    <title>Document</title>
+    <link hrel="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Trang Chứa thông tin liên hệ-Hà Lâm Nguyên</title>
+    <meta name="description" content="Trang web cá nhân của Hà Lâm Nguyên, cung cấp thông tin liên hệ và biểu mẫu liên hệ để người dùng có thể gửi tin nhắn.">
  </head>
 <body>
+    <section>
+        <h1>Liên Hệ Với Tôi</h1>
+        <form action="#" method="post">
+            <fieldset>
+                <legend>Thông tin Cá Nhân</legend>
+
+                <label for="fullname">Họ và tên: *</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Nhập Họ Và Tên Đầy Đủ" required minlength="2" maxlength="100">
+
+                <label for="email">Email: *</label>
+                <input type="email" id="email" name="email" placeholder="example@email.com" required>
+
+                <label for="phone">Số điện thoại: *</label>
+                <input type="tel" id="phone" name="phone" placeholder="Nhập Số Điện Thoại" pattern="[0-9]{10,11}" title="Nhập 10 - 11 Chữ số" >
+                <!--câu 23  -->
+                <label for="birthday">Ngày Sinh: *</label>
+                <input type="date" id="birthday" name="birthday" required>
+            </fieldset>
+            <label for="university">Trường Đại Học: *</label>
+            <input type="text" id="university" name="university" list="university-list" placeholder="Nhập Tên Trường Đại Học" required >
+            <datalist id="university-list">
+                <option value="Đại Học Bách Khoa">
+                <option value="Đại Học Kinh Tế">
+                <option value="Đại Học Ngoại Thương">
+                <option value="Đại Học Y Dược">
+                <option value="Đại Học Sư Phạm">
+            </datalist>
+            <fieldset>
+                <legend>Nội dung liên hệ</legend>
+
+                <label for="subject">Chủ đề: *</label>
+                <select id="subject" name="subject" >
+                    <option value="">-- Chọn Chủ Đề --</option>
+                    <option value="support">Hỗ trợ Kĩ Thuật</option>
+                    <option value="feedback">Học Tập/Trao đổi</option>
+                    <option value="other">Khác</option>
+                </select>
+                <lable> Ưu Tiên Liên Hệ qua:</lable>
+                <fieldset> 
+                    <legend> Kênh Liên Hệ</legend>
+                    <input type="radio" id = "via-phone" name="contact-via" value="email" checked>
+                    <label for="via-email">Email</label>
+                    <input type="radio" id = "via-phone" name="contact-via" value="phone">
+                    <label for="via-phone">Điện Thoại</label>
+                    <input type="radio" id = "via-zalo" name="contact-via" value="zalo">
+                    <label for="via-zalo">Zalo</label>
+                </fieldset>
+
+
+                <label for="message">Tin nhắn: *</label>
+                <textarea id="message" name="message" rows="5" placeholder="Nhập Nội Dung Tin NHắn...." required minlength="10" maxlength="500"></textarea>
+                <label> 
+                    <input type = "checkbox" name="agree" required> Tôi đông ý với<a href="#"> điều khoản Sử Dụng.</a> *
+                </label>
+
+            </fieldset>
+            <button type="submit">Gửi Tin Nhắn</button>
+            <button type="reset">Xóa Và Nhập lại</button>
+        </form>
+    <!--</section>
     <form action="#" method="post">
         <fieldset>
             <legend>Thông tin Cá Nhân</legend>
@@ -46,7 +109,8 @@
         <option value="hn">Hà Nội</option>
     </select>
     <button type="submit">Gửi</button>
-    <input type="reset" value="Reset">
-</form>
+    <input type="reset" value="Reset">  
+</form> -->
+    </section>
 </body>
 </html>
