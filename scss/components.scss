@@ -1,0 +1,21 @@
+@use 'variables' as *;
+
+@mixin flex-center($direction: row) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: $direction;
+}
+
+@mixin card-style($bg: white, $radius: $radius) {
+    background: $bg;
+    border-radius: $radius;
+    box-shadow: $shadow;
+    padding: $spacing * 3;
+}
+
+.card {
+    @include card-style();
+    flex: 1;
+    min-width: 250px;
+}
